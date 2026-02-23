@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* h1 {
+    color: blue;
+    font-size: 20px;
+} */
+
+/* button */
+button {
+    color: red;
+    background-color: green;
+}
+
+button:hover {
+    color: green;
+    background-color: red;
+    border: 2px solid rgb(13, 54, 236);
+    font-size: 100px;
+}
+
+/* class */
+
+.text {
+    color: red;
+    background-color: green;
+}
+
+.text:focus {
+    color: rgb(255, 255, 255);
+    background-color: red;
+}
+
+h1::first-letter {
+    color: red;
+    font-size: 30px;
+    border: 3px solid green;
+}
+
+@keyframes fadeinout {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    animation: fadeinout 3s infinite;
+}
+
+p {
+    margin-left: 30px;
+}
+
+p::before {
+    content: "*";
+    color: red;
+}
