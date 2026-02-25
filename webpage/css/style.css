@@ -7,16 +7,23 @@ header {
     border: 2px solid blue;
     background-color: aqua;
     /* image */
-    /* background-image: url("../../image/image.jpg"); */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    height: 300px;
+    /* background-image: url("../../image/image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* height: 300px; */
     display: flex;
     justify-content: space-around;
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
     /* padding-left: 500px; */
     /* margin: 500px; */
+}
+
+/* image position */
+img {
+    position: absolute;
+    top: 10px;
+    z-index: -1;
 }
 
 /* Media query */
