@@ -1,0 +1,27 @@
+* {
+    /* out side of the space */
+    margin: 0;
+    /* inside of the space */
+    padding: 0;
+}
+
+header {
+    background-color: red;
+    /* padding-left: 50px; */
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+span {
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
