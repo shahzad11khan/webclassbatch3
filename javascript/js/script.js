@@ -11,12 +11,25 @@
 // variables
 
 // name = "web class";
-// console.log(name);
+// console.log("name");
+
+// name = "web class";
+// Name = "batchIII";
+// console.log(name, Name);
 
 // var , let , const
 
 // var name = "web class";
+// console.log(name);
 // var name = "web class 1";
+// console.log(name);
+
+// let name = "shahzad";
+// name = "web class 1";
+// console.log(name);
+
+// let name;
+// const Name = undefined;
 // console.log(name);
 
 // let name = "web class";
@@ -24,6 +37,15 @@
 // let name;
 // name = "web"
 // console.log(name);
+
+
+// find type of variable
+
+// const name = "web";
+// const age = 27;
+// const bolean = true;
+// console.log(typeof age);
+
 
 // primitive
 
@@ -64,3 +86,53 @@
 // console.log(num.toString())
 
 
+
+
+// object
+
+// css
+
+// selector{
+//  property : value
+// }
+
+// const student = {
+//  property : value
+// key : value
+//     name: "ali",
+//     age: 21,
+//     ismale: true,
+// }
+// console.log(student);
+// console.log(student.name);
+
+// operators
+
+// arithmatic
+// + - * / %
+
+// console.log(5 + 5); // 10
+// console.log(5 - 5); // 0
+// console.log(5 * 5); // 25
+// console.log(5 / 5); // 1
+// console.log(5 % 5); // 0
+
+// prompt --> take input from user
+// const name = prompt("enter your name");
+// console.log(name);
+
+// comparison operators
+// < , > , == , === , ! , != , !== , <= , >=
+
+const no = 100;
+const no2 = 1000;
+const no3 = 400;
+const no4 = 10;
+// console.log(typeof "1 + 2 :" + no + no2);
+// console.log(typeof "1 + 2 :", typeof no + no2);
+
+// console.log("no == no2: ", !(no == no2)); // false // just check value
+// console.log("no === no2: ", no === no2); // false // check value and type
+
+
+console.log(no < no2 && no3 > no4)
