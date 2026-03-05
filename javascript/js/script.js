@@ -124,10 +124,10 @@
 // comparison operators
 // < , > , == , === , ! , != , !== , <= , >=
 
-const no = 100;
-const no2 = 1000;
-const no3 = 400;
-const no4 = 10;
+// const no = 100;
+// const no2 = 1000;
+// const no3 = 400;
+// const no4 = 10;
 // console.log(typeof "1 + 2 :" + no + no2);
 // console.log(typeof "1 + 2 :", typeof no + no2);
 
@@ -135,4 +135,94 @@ const no4 = 10;
 // console.log("no === no2: ", no === no2); // false // check value and type
 
 
-console.log(no < no2 && no3 > no4)
+// console.log(no < no2 && no3 > no4)
+
+// console.log(18 > 18);
+// console.log(18 == 18);
+// console.log(18 >= 18);
+
+// if , ifelse , elseif , switch
+
+// const name = "web";
+// let name = "class";
+// name = "web";
+// console.log(name);
+
+
+// const name = "web";
+// console.log(name);
+
+// block
+// {
+// var name = "class"
+// console.log(name)
+// }
+
+// let name;
+// const xyz;
+
+// const name="haris";
+
+// {
+//     const name = "faisal"
+//     console.log(name)
+// }
+// const name = "xyz"
+// console.log(name)
+
+
+
+// const name = "haris";
+
+// console.log(name)
+// {
+//     const name = "faisal"
+//     console.log(name)
+// }
+// name = "xyz"
+// console.log(name)
+
+
+//  conditional statements
+
+// if , ifelse , elseif , switch
+
+// age 
+// if (1 > 4) {
+//     // body of if
+//     console.log("8 is greater than 4")
+// }
+
+// let age = 18;
+// if (age >= 18) {
+//     // body of if
+//     console.log("greater")
+// } else {
+//     // body of else
+//     console.log("small")
+// }
+
+// else if 
+// let age = 1;
+
+// if (age > 18) {
+//     console.log("age is greater")
+// } else if (age == 18) {
+//     console.log("age is equal")
+// } else {
+//     console.log("default");
+// }
+
+// switch
+let age = 18;
+switch (age) {
+    case 18:
+        console.log("age is 18");
+    // break;
+    case 19:
+        console.log("age is 19");
+        break;
+    default:
+        console.log("default");
+        break;
+}
