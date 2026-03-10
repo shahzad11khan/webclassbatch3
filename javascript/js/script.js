@@ -1,5 +1,5 @@
 // loops in js
-console.log("javascript");
+// console.log("javascript");
 // console.log("javascript");
 // console.log("javascript");
 // console.log("javascript");
@@ -58,13 +58,104 @@ console.log("javascript");
 //     console.log(index);
 // }
 
-// 
-let password = Number(prompt("Enter your password"));
-let db_password = 1357;
+//
+// let password = Number(prompt("Enter your password"));
+// let db_password = 1357;
 // console.log(password, db_password)
 // // console.log(password == db_password)
-while (password != db_password) {
-    password = Number(prompt("Enter your password"));
-    console.log("passowrd is not correct!!")
+// while (password != db_password) {
+//     password = Number(prompt("Enter your password"));
+//     console.log("passowrd is not correct!!")
+// }
+// console.log("password is correct!!")
+
+// function
+// syntax
+// function  user_define_name(){ // body of function }
+
+// user_define_name()   // calling
+
+// example
+// const variable_name = 10;
+// function Simple_Function() {
+//     console.log("Called Function..!");
+// }
+
+// Simple_Function()
+//  parameterized function
+// function Addition(num, num2) {
+//     console.log(num + num2);
+
+// }
+// Addition(1, 2);
+// Addition(1, 2);
+// Addition(10, 20);
+// Addition(11, 22);
+// Addition(101, 202);
+
+// default para
+// name = "shahzhad";
+// function Subtraction(num = 10) {
+// function Subtraction(num = 10, num2) {
+// function Subtraction(num, num2 = 90) {
+//     console.log(num - num2)
+// }
+// call
+// Subtraction();
+// Subtraction(10, 70);
+
+// arrow function
+
+// css
+// Simple_Function{}
+// object
+// const Simple_Function={}
+// arrow
+// Simple_Function();  // error
+// const Simple_Function = () => {
+//     console.log("Function called...!");
+
+// }
+
+// Simple_Function(); // good practice
+
+
+// array 
+// syntax 
+
+// const javascript = ["web", "class", "batch", "III"];
+// console.log(javascript);
+// console.log(javascript[2]); // access value in array
+// push --> to add a new value
+// pop --> to remove a value
+// shift --> to remove the first index value
+// unshift --> to add a new value at the first index
+
+
+// javascript.push(true);
+// javascript.push(120);
+// console.log(javascript);
+
+
+// javascript.pop();
+// console.log(javascript);
+
+
+// javascript.unshift("Encoderbytes");
+// console.log(javascript);
+
+// javascript.shift();
+// console.log(javascript)
+
+const student = {
+    name: "umr",
+    age: 21,
 }
-console.log("password is correct!!")
+console.log(student)
+console.log(student.age)
+// console.log(student.field = "web")
+student.xyz = "web"
+console.log(student)
+
+student.name = "shahzad";
+console.log(student)
