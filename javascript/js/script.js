@@ -120,8 +120,8 @@
 // Simple_Function(); // good practice
 
 
-// array 
-// syntax 
+// array
+// syntax
 
 // const javascript = ["web", "class", "batch", "III"];
 // console.log(javascript);
@@ -147,15 +147,51 @@
 // javascript.shift();
 // console.log(javascript)
 
-const student = {
-    name: "umr",
-    age: 21,
-}
-console.log(student)
-console.log(student.age)
-// console.log(student.field = "web")
-student.xyz = "web"
-console.log(student)
+// const student = {
+//     name: "umr",
+//     age: 21,
+// }
+// console.log(student)
+// console.log(student.age)
+// // console.log(student.field = "web")
+// student.xyz = "web"
+// console.log(student)
 
-student.name = "shahzad";
-console.log(student)
+// student.name = "shahzad";
+// console.log(student)
+
+
+// DOM
+
+
+// getelementbyid , getelementbyclassname, getelementbytagname
+
+// result is an array
+// const access = document.getElementsByTagName('h1');
+// console.log("access element:", access[0]);
+
+// const access_useing_class = document.getElementsByClassName('para');
+// console.log(access_useing_class[0]);
+
+
+// byid
+
+const access_element_using_id = document.getElementById('heading_two');
+
+console.log("first accesss:", access_element_using_id.innerText);
+
+
+access_element_using_id.style.color = "blue";
+// console.log("access element using id:", access_element_using_id.innerHTML);
+// console.log("access element using id:", access_element_using_id.innerText);
+// console.log("access element using id:", access_element_using_id.textContent);
+
+// access_element_using_id.innerHTML = "<h4>heading two updated</h4>";
+
+// console.log(access_element_using_id)
+
+
+
+
+
+
