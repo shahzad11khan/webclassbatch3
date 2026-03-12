@@ -176,12 +176,12 @@
 
 // byid
 
-const access_element_using_id = document.getElementById('heading_two');
+// const access_element_using_id = document.getElementById('heading_two');
 
-console.log("first accesss:", access_element_using_id.innerText);
+// console.log("first accesss:", access_element_using_id.innerText);
 
 
-access_element_using_id.style.color = "blue";
+// access_element_using_id.style.color = "blue";
 // console.log("access element using id:", access_element_using_id.innerHTML);
 // console.log("access element using id:", access_element_using_id.innerText);
 // console.log("access element using id:", access_element_using_id.textContent);
@@ -189,6 +189,48 @@ access_element_using_id.style.color = "blue";
 // access_element_using_id.innerHTML = "<h4>heading two updated</h4>";
 
 // console.log(access_element_using_id)
+
+
+// query selector
+
+
+// document.querySelector() with tag name
+// const access_element_using_query_selector = document.querySelector("h1");
+// console.log(access_element_using_query_selector);
+// docuemt.gueryselector() with class name
+// const access_element_using_query_selector_with_class_name = document.querySelector(".qury");
+// console.log(access_element_using_query_selector_with_class_name);
+// docuemt.gueryselector() with id
+// const access_element_using_query_selector_with_id = document.querySelector("#qury");
+// console.log(access_element_using_query_selector_with_id);
+
+// query selector all
+
+// document.queryselectorAll()  with tag name
+
+// const access_element_using_queryselectorall_with_tag_name = document.querySelectorAll('h1');
+// console.log(access_element_using_queryselectorall_with_tag_name);
+
+// const access_element_using_queryselectorall_with_tag_name = document.querySelectorAll('.qury');
+// console.log(access_element_using_queryselectorall_with_tag_name);
+
+// class activity by id
+
+
+
+
+// set attribute
+
+// const access_element_using_id = document.querySelector('#image');
+// console.log(access_element_using_id); //print
+// image\updateimage.png
+// D:\batchIII\HTML\image\updateimage.png
+// access_element_using_id.setAttribute('src', '../../image/updateimage.png');
+
+const access_element_using_id = document.querySelector('#heading_one');
+console.log(access_element_using_id);
+access_element_using_id.setAttribute('style', 'color:red');
+
 
 
 
