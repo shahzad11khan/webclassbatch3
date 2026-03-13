@@ -227,9 +227,47 @@
 // D:\batchIII\HTML\image\updateimage.png
 // access_element_using_id.setAttribute('src', '../../image/updateimage.png');
 
-const access_element_using_id = document.querySelector('#heading_one');
-console.log(access_element_using_id);
-access_element_using_id.setAttribute('style', 'color:red');
+// const access_element_using_id = document.querySelector('#heading_one');
+// console.log(access_element_using_id);
+// access_element_using_id.setAttribute('style', 'color:red');
+
+// onclick , ondblclick , mouseover , mouseout , keydown , keyup , keypress
+
+// function click_me() {
+// console.log("button clicked");
+// alert("button clicked");
+// document.writeln("<h1>button clicked</h1>")
+// }
+
+// const access_button = document.getElementById("click");
+// console.log(access_button);
+// addEventListener()
+// access_button.addEventListener()
+// access_button.addEventListener("click", function fun() {
+//     console.log("button clicked");
+// })
+// function fun() {
+//     console.log(3 + 5);
+// }
+// addeventlistener parameter is must string and function
+// access_button.addEventListener("mouseover", fun)
+
+// accessing 
+const email = document.getElementById("email");
+const error = document.getElementById("error");
+const login = document.getElementById("login");
+// console.log(email.value, login);
+const gender = document.getElementById("male");
+const gender2 = document.getElementById("female");
+
+function func() {
+    // console.log(gender.checked, gender2.checked);
+    const result = gender.checked ? "male" : "female";
+    console.log(result);
+    // email.value == "" || !email.value.includes('@') ? error.innerText = "email is required" : error.innerText = email.value;
+    // error.style.color = "red";
+}
+login.addEventListener("click", func)
 
 
 
