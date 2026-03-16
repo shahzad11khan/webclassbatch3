@@ -252,22 +252,49 @@
 // addeventlistener parameter is must string and function
 // access_button.addEventListener("mouseover", fun)
 
-// accessing 
-const email = document.getElementById("email");
-const error = document.getElementById("error");
-const login = document.getElementById("login");
-// console.log(email.value, login);
-const gender = document.getElementById("male");
-const gender2 = document.getElementById("female");
+// accessing
+// const email = document.getElementById("email");
+// const error = document.getElementById("error");
+// const login = document.getElementById("login");
+// // console.log(email.value, login);
+// const gender = document.getElementById("male");
+// const gender2 = document.getElementById("female");
 
-function func() {
-    // console.log(gender.checked, gender2.checked);
-    const result = gender.checked ? "male" : "female";
-    console.log(result);
-    // email.value == "" || !email.value.includes('@') ? error.innerText = "email is required" : error.innerText = email.value;
-    // error.style.color = "red";
-}
-login.addEventListener("click", func)
+// function func() {
+//     // console.log(gender.checked, gender2.checked);
+//     const result = gender.checked ? "male" : "female";
+//     console.log(result);
+//     // email.value == "" || !email.value.includes('@') ? error.innerText = "email is required" : error.innerText = email.value;
+//     // error.style.color = "red";
+// }
+// login.addEventListener("click", func)
+// ananumus function --> with out any funtion name directly access
+// function xyz(){}
+// function (){}
+
+// accessing 
+const access_name_input = document.getElementById('name');
+const access_btn = document.getElementById('click');
+let access_msg = document.getElementById('msg');
+// console.log(access_btn);
+// access_btn.addEventListerne('string',function())
+// access_btn.addEventListener("click", function () {
+//     console.log("function called ........!");
+// })
+
+access_btn.addEventListener('click', function () {
+    // console.log("function called ........!");
+    // console.log(access_name_input.value);
+    // access_msg.innerText = access_name_input.value;
+    if (access_name_input.value === "") {
+        access_msg.innerHTML = "Name is required";
+        access_name_input.style.borderColor = "red";
+        access_msg.style.color = "red";
+        return
+    }
+    access_msg.innerHTML = access_name_input.value
+
+})
 
 
 
