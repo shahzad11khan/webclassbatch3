@@ -249,7 +249,7 @@
 // function fun() {
 //     console.log(3 + 5);
 // }
-// addeventlistener parameter is must string and function
+// addeventlistener parameter is must string and 
 // access_button.addEventListener("mouseover", fun)
 
 // accessing
@@ -275,7 +275,13 @@
 // accessing 
 const access_name_input = document.getElementById('name');
 const access_btn = document.getElementById('click');
-let access_msg = document.getElementById('msg');
+const access_clear_btn = document.getElementById('clear');
+const access_add_btn = document.getElementById('add');
+console.log(access_clear_btn);
+
+// console.log(access_btn);
+
+// let access_msg = document.getElementById('msg');
 // console.log(access_btn);
 // access_btn.addEventListerne('string',function())
 // access_btn.addEventListener("click", function () {
@@ -284,18 +290,30 @@ let access_msg = document.getElementById('msg');
 
 access_btn.addEventListener('click', function () {
     // console.log("function called ........!");
-    // console.log(access_name_input.value);
-    // access_msg.innerText = access_name_input.value;
-    if (access_name_input.value === "") {
-        access_msg.innerHTML = "Name is required";
-        access_name_input.style.borderColor = "red";
-        access_msg.style.color = "red";
-        return
-    }
-    access_msg.innerHTML = access_name_input.value
-
+    console.log(access_name_input.value);
+    
+    // // console.log(access_name_input.value);
+    // // access_msg.innerText = access_name_input.value;
+    // if (access_name_input.value === "") {
+    //     access_msg.innerHTML = "Name is required";
+    //     access_name_input.style.borderColor = "red";
+    //     access_msg.style.color = "red";
+    //     return
+    // }
+    // access_msg.innerHTML = access_name_input.value
 })
 
+access_clear_btn.addEventListener('click', function () {
+    access_name_input.value = "";
+})
+
+
+
+access_add_btn.addEventListener("click", function () {
+    
+    console.log(eval(access_name_input.value)); 
+    access_name_input.value = eval(access_name_input.value);
+})
 
 
 
