@@ -273,11 +273,11 @@
 // function (){}
 
 // accessing 
-const access_name_input = document.getElementById('name');
-const access_btn = document.getElementById('click');
-const access_clear_btn = document.getElementById('clear');
-const access_add_btn = document.getElementById('add');
-console.log(access_clear_btn);
+// const access_name_input = document.getElementById('name');
+// const access_btn = document.getElementById('click');
+// const access_clear_btn = document.getElementById('clear');
+// const access_add_btn = document.getElementById('add');
+// console.log(access_clear_btn);
 
 // console.log(access_btn);
 
@@ -288,9 +288,9 @@ console.log(access_clear_btn);
 //     console.log("function called ........!");
 // })
 
-access_btn.addEventListener('click', function () {
-    // console.log("function called ........!");
-    console.log(access_name_input.value);
+// access_btn.addEventListener('click', function () {
+//     // console.log("function called ........!");
+//     console.log(access_name_input.value);
     
     // // console.log(access_name_input.value);
     // // access_msg.innerText = access_name_input.value;
@@ -301,22 +301,155 @@ access_btn.addEventListener('click', function () {
     //     return
     // }
     // access_msg.innerHTML = access_name_input.value
-})
+// })
 
-access_clear_btn.addEventListener('click', function () {
-    access_name_input.value = "";
-})
+// access_clear_btn.addEventListener('click', function () {
+//     access_name_input.value = "";
+// })
 
 
 
-access_add_btn.addEventListener("click", function () {
+// access_add_btn.addEventListener("click", function () {
     
-    console.log(eval(access_name_input.value)); 
-    access_name_input.value = eval(access_name_input.value);
+//     console.log(eval(access_name_input.value)); 
+//     access_name_input.value = eval(access_name_input.value);
+// })
+
+
+// dom 1st element access
+
+// const access_btn =  document.getElementById('click');
+// const access_name_input = document.getElementById('name');
+// console.log(access_btn);
+// access_btn.addEventListener('click',function(){
+    // console.log(access_name_input.value);
+    // if(access_name_input.value === ""){
+        // alert("Name is required");
+    // }
+    // console.log(access_name_input.value);
+    
+    // console.log("button clicked ...!");
+    
+// })
+
+// createelement 
+// appendchild
+// const create_element = document.createElement('h1');
+// create_element.innerText = "Hello World"
+
+// document.body.appendChild(create_element)
+
+// access ul
+
+// const ul = document.getElementById('list');
+// const create_li = document.createElement('li');
+// create_li.innerText = "Hello World"
+
+// console.log(create_li);
+
+// document.body.appendChild(create_li)
+// ul.appendChild(create_li)
+
+// console.log('my name is ali');
+//  ``
+// const name = "umar";
+// const age = 21;
+// console.log(`hi my name is ${name} my age is ${age}`);
+
+let input = document.getElementById('result');
+const clear = document.getElementById('clear');
+const eql = document.getElementById('eql');
+const one = document.getElementById('one');
+const two = document.getElementById('two');
+const sub = document.getElementById('sub');
+
+clear.addEventListener('click', function () {
+    // console.log(input.value);
+    if(input.value) {
+        input.value = ""
+    }else{
+        return;
+    }
+    
+})
+
+eql.addEventListener('click', function () {
+    // console.log("eql button called..!");
+
+    // console.log(2+3); eval()
+    console.log(input);
+    console.log(eval(input.value)); 
+    input.value = eval(input.value);
+    // input.innerText = eval(input.value);
+    // input.innerHTML = eval(input.value);
+    // input.textContent = eval(input.value);
+})
+
+
+one.addEventListener('click', function () {
+    // console.log("one button called..!");
+    input.value += "1";
+})
+
+two.addEventListener('click', function () {
+    // console.log("two button called..!");
+    input.value += "2";
+})
+
+sub.addEventListener('click', function () {
+    // console.log("sub button called..!");
+    input.value += "-";
 })
 
 
 
+// const obj_student = {
+//     name: "umar",
+//     age: 21,
+//     course: "BSCS",
+//     section: "A",
+//     university :"uop"
+// }
+
+// const arr = [2,34,55645]    
+
+// console.log(obj_student.name);
+// console.log(obj_student.name);
+// console.log(obj_student.name);
+// console.log(obj_student.name);
+// console.log(obj_student.name);
+// console.log(obj_student.name);
+
+
+// destructoring
+
+// const {name}=obj_student;
+
+
+// name,name anemkenamesknsemskenaem
 
 
 
+const ul = document.getElementById('list');
+function names(...para){
+    // alert("func called")
+    console.log(para);
+    para.forEach((name)=>{
+        // console.log(name);
+        const li = document.createElement('li');
+        li.innerText = name;
+         ul.appendChild(li)
+    })
+
+    // para.forEach((value)=>{
+    //     console.log(value);
+        
+    // }   )
+    
+}  
+
+
+
+
+
+names("umar","ali","humam","ikram","khista","muslim");
