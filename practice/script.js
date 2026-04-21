@@ -77,6 +77,14 @@
 // console.log(array);
 
 
+// DOM
+// how to access h1 content using dom
+const access_h1 = document.getElementById("");
+
+
+
+
+
 
 
 
