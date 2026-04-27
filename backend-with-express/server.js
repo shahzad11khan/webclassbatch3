@@ -17,14 +17,20 @@
 // })
 
 
-const express = require('express'); // express framework import 
-const cors = require('cors');
+// const express = require('express'); // express framework import 
+import express from 'express'
+// const cors = require('cors');
+import cors from 'cors';
 const PORT = 6166; // port number
 const app = express(); // express application
+// const db = require('./config/database')
+import db from './config/database.js'
 
 // use cors
 app.use(cors());
 
+// connect db
+db();
 // get
 
 app.get('/get-all-users',(req,res)=>{
@@ -32,7 +38,8 @@ app.get('/get-all-users',(req,res)=>{
     .json([{
             name:"Khista Rehman",
             age:23,
-            image:'/upload/image.jpg'
+            image:'/upload/image.jpg',
+            // behaviors :{}
         },{
             name:"Zia Ul Haq",
             age:90,
