@@ -25,9 +25,11 @@ const PORT = 6166; // port number
 const app = express(); // express application
 // const db = require('./config/database')
 import db from './config/database.js'
+import User from './models/Users.Models.js'
 
 // use cors
-app.use(cors());
+app.use(cors()); // handle the reponses
+app.use(express.json()); //handle the request
 
 // connect db
 db();
@@ -54,21 +56,47 @@ app.get('/get-all-users',(req,res)=>{
 
 // post
 
-app.post('/create-user',(req,res)=>{});
+app.post('/create-user',async (req,res)=>{
+    try{
+        // console.log(req.body)
+        const newUser =  await  User.create(req.body)
+        console.log(newUser)
+        if(!newUser){
+            console.log("Error Occure")
+        }
+        res.status(201).json(newUser)
+    }catch(err){
+        console.log(err)
+    }
+});
 
 // put --> means to update
 
-app.put('/update-user/:id',(req,res)=>{});
+app.put('/update-user/:id',(req,res)=>{
+    // User.findbyidUpdate()
+});
 
 // delete
 
 
-app.delete('/delete-user/:id',(req,res)=>{});
+app.delete('/delete-user/:id',async(req,res)=>{
+    // Users.findbyidDelete()
+    try{
+        console.log(req.params.id)
+
+const deleteSelectedUser = await User.findByIdAndDelete(req.params.id)
+res.status(200).json(deleteSelectedUser)
+    }catch(error){
+        console.log(error)
+    }
+});
 
 
 // get specific id
 
-app.get('/get-specific-user/:id',(req,res)=>{});
+app.get('/get-specific-user/:id',(req,res)=>{
+    // User.findbyid()
+});
 
 // listen 
 // just use for developer
