@@ -27,6 +27,7 @@ const app = express(); // express application
 import db from './config/database.js'
 import User from './models/Users.Models.js'
 import bcrypt from 'bcryptjs'
+import jwt from 'jsonwebtoken'
 
 // use cors
 app.use(cors()); // handle the reponses
@@ -34,6 +35,22 @@ app.use(express.json()); //handle the request
 
 // connect db
 db();
+
+
+// middleware
+
+function middleware(req,res,next){
+    const token = req.header.Authorization || req.headers.authorization;
+    console.log(token)
+    // const isLogin =false;
+    // if(isLogin){
+    //     console.log("middleware called...!")
+    // }else{
+    //     console.log("user is unauthorize")
+    // }
+console.log({message:"Middleware called..!"})
+next();
+}
 // get
 
 app.get('/get-all-users',(req,res)=>{
@@ -110,7 +127,7 @@ app.post('/hash-word',(req,res)=>{
 console.log(req.body.password)
 const hash = bcrypt.hashSync(req.body.password,10);
 console.log(hash)
-console.log(bcrypt.compareSync(req.body.password,hash));
+ 
 })
 
 
@@ -128,7 +145,22 @@ app.post('/login',async (req,res)=>{
 res.status(200).json({find_user})
 })
 
+
+// create jwt token
+
+app.get('/create-jwt',(req,res)=>{
+console.log('jwt route called...!')
+
+// console.log()
+res.json(jwt.sign({name:"ali",age:89},'abcdefg',{expiresIn:'1d'}))
+})
+
+
+app.get('/dashboard',middleware,(req,res)=>{
+    res.json({message:"Welcome to Dashboard"})
+})
 // listen 
+
 // just use for developer
 app.listen(PORT,()=>{
 console.log(`Your Server Is Running On Port:${PORT}`);
